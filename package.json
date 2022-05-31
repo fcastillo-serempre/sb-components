@@ -2,36 +2,39 @@
   "name": "fc-my-storybook-components",
   "version": "0.1.0",
   "private": false,
+  "license": "MIT",
   "main": "dist/index.js",
+  "homepage": "https://fcastillo-serempre.github.io/sb-components/?path=/story/example-introduction--page",
   "typings": "dist/index.d.ts",
+  "repository": {
+    "url": "https://github.com/fcastillo-serempre/sb-components",
+    "type": "git"
+  },
   "peerDependencies": {
-    "react": ">=16.0.0",
-    "react-dom": ">=16.0.0"
+    "react": ">=16"
   },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.2.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.1",
-    "@types/node": "^16.11.36",
-    "@types/react": "^18.0.9",
-    "@types/react-dom": "^18.0.4",
-    "web-vitals": "^2.1.4"
-  },
-  "devDependencies": {
-    "typescript": "^3.9.5",
-    "@babel/core": "^7.17.12",
-    "@storybook/addon-actions": "^6.4.22",
-    "@storybook/addon-essentials": "^6.4.22",
-    "@storybook/addon-interactions": "^6.4.22",
-    "@storybook/addon-links": "^6.4.22",
-    "@storybook/react": "^6.4.22",
-    "@storybook/testing-library": "^0.0.11",
-    "babel-loader": "^8.2.5",
-    "chromatic": "^6.5.4",
-    "copyfiles": "^2.4.1",
-    "rimraf": "^3.0.2",
-    "semantic-release": "^19.0.2"
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "postcss": "^8.3.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "start-storybook -p 6006",
@@ -60,6 +63,20 @@
       "last 1 safari version"
     ]
   },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/react": "^6.3.12",
+    "babel-loader": "^8.2.2",
+    "chromatic": "^6.0.4",
+    "copyfiles": "^2.4.1",
+    "css-loader": "^6.4.0",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^18.0.0"
+  },
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
@@ -67,15 +84,5 @@
     "@semantic-release/github",
     "@semantic-release/npm",
     "@semantic-release/git"
-  ],
-  "release": {
-    "branches": [
-      "main",
-      "develop"
-    ]
-  },
-  "files": [
-    "dist",
-    "src"
   ]
 }

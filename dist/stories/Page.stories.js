@@ -1,4 +1,15 @@
 "use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -35,12 +46,9 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoggedIn = exports.LoggedOut = void 0;
-var react_1 = __importDefault(require("react"));
+var jsx_runtime_1 = require("react/jsx-runtime");
 var testing_library_1 = require("@storybook/testing-library");
 var Page_1 = require("./Page");
 exports.default = {
@@ -51,7 +59,7 @@ exports.default = {
         layout: 'fullscreen',
     },
 };
-var Template = function (args) { return <Page_1.Page {...args}/>; };
+var Template = function (args) { return (0, jsx_runtime_1.jsx)(Page_1.Page, __assign({}, args)); };
 exports.LoggedOut = Template.bind({});
 exports.LoggedIn = Template.bind({});
 // More on interaction testing: https://storybook.js.org/docs/react/writing-tests/interaction-testing
@@ -62,7 +70,7 @@ exports.LoggedIn.play = function (_a) {
         return __generator(this, function (_b) {
             switch (_b.label) {
                 case 0:
-                    canvas = testing_library_1.within(canvasElement);
+                    canvas = (0, testing_library_1.within)(canvasElement);
                     return [4 /*yield*/, canvas.getByRole('button', { name: /Log in/i })];
                 case 1:
                     loginButton = _b.sent();
