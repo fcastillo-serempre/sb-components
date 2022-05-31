@@ -2,6 +2,8 @@
   "name": "fc-my-storybook-components",
   "version": "0.1.0",
   "private": false,
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "peerDependencies": {
     "react": ">=16.0.0",
     "react-dom": ">=16.0.0"
@@ -17,6 +19,7 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "typescript": "^3.9.5",
     "@babel/core": "^7.17.12",
     "@storybook/addon-actions": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
@@ -67,7 +70,12 @@
   ],
   "release": {
     "branches": [
-      "main"
+      "main",
+      "develop"
     ]
-  }
+  },
+  "files": [
+    "dist",
+    "src"
+  ]
 }
